@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7fbff" />
+  <meta name="description" content="NeuroBlocks — 模块化神经科技平台与 AI Skill 生态系统。Hardware Blocks × SkillOS × NeuroAgent，从想法到脑机接口产品。" />
+  <title>NeuroBlocks | 模块化神经科技平台与 AI Skill 生态系统</title>
+  <link rel="preload" href="assets/hero.webp" as="image" />
+  <style>
+    :root{
+      --bg:#f7fbff; --paper:#fff; --ink:#08255d; --ink2:#244576; --blue:#1479ff; --cyan:#38c8ff;
+      --line:#d9eaff; --muted:#6f88a9; --soft:#eef7ff; --green:#13b887; --shadow:0 24px 80px rgba(25,92,168,.12);
+      --radius:28px; --radius-sm:18px; --max:1440px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,-apple-system,sans-serif;color:var(--ink);background:linear-gradient(180deg,#fff 0,#f8fcff 34%,#f5faff 100%);overflow-x:hidden}
+    a{color:inherit;text-decoration:none} img,video{max-width:100%;display:block} button,input{font:inherit}
+    .wrap{width:min(var(--max),calc(100% - 48px));margin:auto}.section{padding:112px 0;position:relative}.section.compact{padding:78px 0}.eyebrow{display:inline-flex;gap:9px;align-items:center;padding:8px 13px;border:1px solid var(--line);background:#fff;border-radius:999px;color:#176bc9;font-size:13px;font-weight:800;letter-spacing:.08em}.dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));box-shadow:0 0 0 5px #e9f5ff}.h2{font-size:clamp(34px,4vw,66px);letter-spacing:-.045em;line-height:1.06;margin:18px 0 14px}.lead{font-size:clamp(17px,1.55vw,23px);line-height:1.7;color:var(--ink2);max-width:920px}.muted{color:var(--muted)}
+    .gradient-text{background:linear-gradient(90deg,#072f77,#1479ff 60%,#30b7f5);-webkit-background-clip:text;color:transparent}
+    .nav{position:fixed;left:0;right:0;top:0;z-index:80;background:rgba(255,255,255,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(202,226,250,.74);transition:.25s}.nav.scrolled{box-shadow:0 8px 40px rgba(20,80,140,.09)}.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:23px;letter-spacing:-.03em}.brand-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(145deg,#0c57d6,#31c8ff);position:relative;box-shadow:0 10px 25px rgba(21,119,255,.22)}.brand-mark:before,.brand-mark:after{content:"";position:absolute;background:white;border-radius:4px}.brand-mark:before{width:18px;height:7px;left:10px;top:9px;box-shadow:0 12px 0 #fff}.brand-mark:after{width:7px;height:18px;left:15.5px;top:10px}.brand small{display:block;font-size:10px;color:#6282aa;font-weight:700;letter-spacing:.08em;margin-top:2px}.menu{display:flex;gap:23px;align-items:center;font-size:14px;font-weight:700;color:#31527f}.menu a{transition:.2s}.menu a:hover{color:var(--blue)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:13px 20px;font-weight:800;border:1px solid var(--line);background:#fff;color:#134c98;cursor:pointer;transition:.22s}.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(31,107,190,.12)}.btn.primary{color:white;border:0;background:linear-gradient(135deg,#0b5ce2,#1599ff 66%,#28c4ff);box-shadow:0 12px 32px rgba(15,111,241,.25)}.btn.ghost{background:rgba(255,255,255,.56)}
+    .hero{min-height:100vh;padding-top:118px;display:flex;align-items:center;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:700px;height:700px;border-radius:50%;right:-250px;top:-170px;background:radial-gradient(circle,#d8f1ff 0,rgba(220,244,255,.25) 45%,transparent 70%)}.hero:after{content:"";position:absolute;width:650px;height:300px;left:-220px;bottom:0;background:radial-gradient(ellipse,#dff3ff 0,transparent 70%)}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center;position:relative;z-index:2}.hero h1{font-size:clamp(54px,7vw,104px);margin:0;line-height:.92;letter-spacing:-.065em}.hero .subtitle{font-size:clamp(25px,2.4vw,39px);font-weight:800;margin:24px 0 12px;line-height:1.25}.hero p{font-size:19px;line-height:1.72;color:#36577f;max-width:690px}.hero-actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}.hero-proof{display:flex;gap:22px;margin-top:34px;flex-wrap:wrap}.proof{display:flex;gap:10px;align-items:center;color:#486789;font-size:13px;font-weight:700}.proof b{font-size:17px;color:#0c4d9f}.video-shell{border-radius:34px;padding:12px;background:linear-gradient(145deg,rgba(255,255,255,.95),rgba(231,246,255,.74));border:1px solid #d8eaff;box-shadow:var(--shadow);position:relative}.video-shell video{border-radius:25px;width:100%;aspect-ratio:16/9;object-fit:cover}.video-shell .chip{position:absolute;z-index:4;padding:10px 14px;border-radius:14px;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border:1px solid #d9e9fb;font-size:13px;font-weight:800;box-shadow:0 10px 30px rgba(23,83,144,.12)}.chip.c1{left:-34px;top:18%}.chip.c2{right:-28px;top:39%}.chip.c3{left:7%;bottom:-20px}.mini-wave{height:44px;overflow:hidden;margin-top:24px;border-radius:15px;background:linear-gradient(90deg,#f5fbff,#eaf7ff);position:relative}.mini-wave svg{width:100%;height:100%}
+    .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.76);overflow:hidden}.ticker-track{display:flex;gap:34px;width:max-content;padding:14px 0;animation:ticker 25s linear infinite;font-weight:800;font-size:13px;color:#3d6593}.ticker-track span{display:inline-flex;gap:9px;align-items:center}.ticker-track i{width:8px;height:8px;border-radius:2px;background:linear-gradient(135deg,var(--blue),var(--cyan))}@keyframes ticker{to{transform:translateX(-50%)}}
+    .split{display:grid;grid-template-columns:.92fr 1.08fr;gap:64px;align-items:center}.image-card{padding:10px;background:#fff;border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow);overflow:hidden}.image-card img{border-radius:22px;width:100%;aspect-ratio:16/9;object-fit:cover}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:30px}.stat{padding:18px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#fff,#f7fbff)}.stat strong{font-size:25px;display:block}.stat small{font-size:12px;color:#6985a8}
+    .layers{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:42px}.layer{min-height:210px;padding:24px;border-radius:24px;border:1px solid #dbeeff;background:linear-gradient(180deg,#fff,#f3f9ff);position:relative;overflow:hidden;transition:.25s;cursor:pointer}.layer:hover,.layer.active{transform:translateY(-8px);border-color:#9ed2ff;box-shadow:0 22px 46px rgba(40,114,191,.13)}.layer-num{font-size:11px;font-weight:900;color:#2b85e6;letter-spacing:.12em}.layer h3{font-size:22px;margin:18px 0 10px}.layer p{font-size:13px;line-height:1.65;color:#6580a2}.layer-icon{position:absolute;right:18px;bottom:11px;font-size:64px;opacity:.08}.layer-detail{margin-top:16px;padding:26px;border-radius:24px;background:#062c6e;color:white;display:none;grid-template-columns:1fr 1fr;gap:20px}.layer-detail.show{display:grid;animation:fadeUp .25s ease}.layer-detail p{color:#d7e8ff;line-height:1.7;margin:0}.layer-detail .tags{display:flex;flex-wrap:wrap;gap:8px;align-content:start}.tag{padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.1);font-size:12px;border:1px solid rgba(255,255,255,.15)}
+    .hardware-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:34px}.hw{background:#fff;border:1px solid var(--line);border-radius:20px;padding:19px;min-height:146px;transition:.2s;cursor:pointer}.hw:hover,.hw.selected{border-color:#5ebaff;transform:translateY(-5px);box-shadow:0 15px 34px rgba(27,98,181,.12)}.hw .ico{font-size:29px;margin-bottom:20px}.hw h4{font-size:16px;margin:0 0 7px}.hw p{margin:0;color:#728aa8;font-size:12px;line-height:1.55}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.filter{border:1px solid #d7e9fc;background:#fff;color:#3d648f;padding:9px 14px;border-radius:999px;font-size:12px;font-weight:800;cursor:pointer}.filter.active{background:#0c6ee9;color:white;border-color:#0c6ee9}
+    .composer{display:grid;grid-template-columns:.8fr 1.2fr;gap:26px;margin-top:32px}.console{border-radius:28px;background:#041d49;color:white;padding:28px;box-shadow:0 26px 70px rgba(3,41,92,.18);min-height:480px}.console h3{margin:0 0 14px;font-size:25px}.prompt{display:flex;gap:8px;background:rgba(255,255,255,.1);padding:9px;border:1px solid rgba(255,255,255,.16);border-radius:17px}.prompt input{flex:1;background:transparent;border:0;outline:0;color:white;padding:12px;font-size:14px}.prompt input::placeholder{color:#99b4dc}.prompt button{border:0;background:#1b8cff;color:white;border-radius:12px;padding:0 16px;font-weight:900;cursor:pointer}.flow{margin-top:27px;display:grid;gap:10px}.flow-step{border-radius:15px;padding:13px 15px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:12px;opacity:.45;transform:translateX(-10px);transition:.35s}.flow-step.on{opacity:1;transform:none;background:rgba(27,141,255,.18);border-color:rgba(95,189,255,.45)}.step-no{width:28px;height:28px;border-radius:8px;background:#1593ff;display:grid;place-items:center;font-size:11px;font-weight:900}.builder{border-radius:28px;border:1px solid var(--line);background:linear-gradient(180deg,#fff,#f4faff);padding:20px;box-shadow:0 18px 50px rgba(26,97,171,.08)}.builder-toolbar{display:flex;justify-content:space-between;align-items:center;padding:8px 8px 16px}.builder-toolbar strong{font-size:17px}.run{border:0;background:#1479ff;color:white;padding:10px 19px;border-radius:12px;font-weight:900;cursor:pointer}.canvas{min-height:386px;border-radius:20px;border:1px dashed #c6e2ff;background-image:radial-gradient(#c4e1ff 1px,transparent 1px);background-size:18px 18px;padding:34px 22px;display:flex;align-items:center;justify-content:center;gap:14px;overflow:auto}.node{min-width:132px;padding:19px 14px;border:1px solid #cfe7ff;background:rgba(255,255,255,.96);border-radius:17px;text-align:center;box-shadow:0 10px 24px rgba(27,103,182,.08);position:relative}.node b{display:block;font-size:14px}.node small{display:block;font-size:11px;color:#7189a7;margin-top:6px}.arrow{font-size:24px;color:#3c96ed}.node.sensor{border-color:#9fd2ff}.node.skill{background:linear-gradient(180deg,#f0fbff,#fff);border-color:#7ed7ff}.node.agent{background:linear-gradient(180deg,#f6f1ff,#fff);border-color:#cab7ff}.node.output{background:linear-gradient(180deg,#effff9,#fff);border-color:#a8ead2}
+    .scenarios{display:grid;grid-template-columns:1.2fr .8fr;gap:26px}.scene-main{border-radius:30px;overflow:hidden;border:1px solid var(--line);position:relative;min-height:520px;background:#fff}.scene-main img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.scene-main:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,27,68,.78) 100%)}.scene-copy{position:absolute;left:30px;right:30px;bottom:26px;color:white;z-index:3}.scene-copy h3{font-size:35px;margin:0 0 8px}.scene-copy p{margin:0;color:#ddecff;line-height:1.6}.scene-tabs{display:grid;gap:10px}.scene-tab{padding:19px;border:1px solid var(--line);border-radius:19px;background:white;cursor:pointer;text-align:left;transition:.2s}.scene-tab:hover,.scene-tab.active{border-color:#82c9ff;background:#f1f9ff;transform:translateX(-5px)}.scene-tab strong{display:block;font-size:15px;margin-bottom:4px}.scene-tab small{color:#6b85a4}.scene-video{margin-top:30px;border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}.scene-video video{width:100%;aspect-ratio:16/9;object-fit:cover}
+    .clinical-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:35px}.mode{border-radius:26px;border:1px solid var(--line);background:#fff;padding:28px}.mode h3{font-size:26px;margin:10px 0}.mode ul{padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}.mode li{font-size:13px;color:#486a91;padding:11px;border-radius:13px;background:#f4f9ff}.mode.clinical{background:linear-gradient(180deg,#f9fdff,#eff8ff)}.notice{margin-top:20px;padding:15px 18px;border-left:3px solid #2aa8ef;background:#edf8ff;border-radius:8px;color:#3f6591;font-size:13px;line-height:1.65}
+    .compare-wrap{overflow:auto;border-radius:26px;border:1px solid var(--line);background:#fff;box-shadow:0 14px 46px rgba(27,91,160,.08)}table{border-collapse:separate;border-spacing:0;width:100%;min-width:1080px;font-size:13px}th,td{padding:15px 15px;border-bottom:1px solid #e6f1fb;text-align:left;vertical-align:top}th{position:sticky;top:75px;background:#f2f8ff;z-index:2;color:#164d90}th:first-child{left:0;z-index:3}td:first-child{font-weight:800;color:#163f78;background:#fbfdff;position:sticky;left:0}td strong{color:#0d6de5}.pill{display:inline-block;padding:5px 8px;border-radius:999px;background:#e9f4ff;color:#1165bd;font-size:10px;font-weight:800;margin:2px}.pill.plan{background:#eafaf4;color:#0d8e68}.source-note{font-size:11px;color:#6b84a1;line-height:1.55}.source-note a{text-decoration:underline}.comparison-note{margin-top:14px;color:#627d9d;font-size:12px;line-height:1.7}
+    .biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.revenue-wheel{aspect-ratio:1;border-radius:50%;background:conic-gradient(#0c6fe9 0 45deg,#34a8ff 45deg 90deg,#6fd2ff 90deg 135deg,#8ee8d2 135deg 180deg,#7a9cff 180deg 225deg,#5e70d9 225deg 270deg,#18b7b2 270deg 315deg,#0a4faa 315deg 360deg);padding:42px;box-shadow:0 30px 80px rgba(17,105,202,.16);max-width:540px;margin:auto;position:relative}.revenue-wheel:after{content:"生态驱动\A多元收入";white-space:pre;position:absolute;inset:28%;background:#fff;border-radius:50%;display:grid;place-items:center;text-align:center;font-size:30px;font-weight:900;line-height:1.1;box-shadow:inset 0 0 0 1px #dceeff}.biz-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}.biz-item{padding:17px;border-radius:18px;background:#fff;border:1px solid var(--line)}.biz-item strong{display:block;font-size:15px}.biz-item small{color:#7088a5}
+    .partners{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}.partner{padding:22px;border-radius:21px;border:1px solid var(--line);background:#fff;min-height:150px}.partner b{font-size:17px}.partner p{font-size:12px;color:#7189a8;line-height:1.65}.partner .big{font-size:34px}
+    .roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:34px;position:relative}.roadmap:before{content:"";position:absolute;height:2px;background:linear-gradient(90deg,#68ccff,#116eea);top:23px;left:5%;right:5%}.rm{position:relative;padding:54px 20px 0}.rm:before{content:"";position:absolute;width:16px;height:16px;border:5px solid #fff;background:#1785f5;border-radius:50%;top:14px;left:20px;box-shadow:0 0 0 1px #82c9ff}.rm small{color:#1682ee;font-weight:900}.rm h4{margin:6px 0 8px}.rm p{font-size:12px;color:#6f86a2;line-height:1.65}
+    .cta{padding:90px 0}.cta-box{border-radius:38px;padding:58px;background:linear-gradient(135deg,#04245e,#0b6bdd 60%,#19a6f3);color:#fff;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;position:relative;overflow:hidden}.cta-box:after{content:"";width:500px;height:500px;position:absolute;border-radius:50%;right:-180px;top:-220px;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 65%)}.cta-box h2{font-size:clamp(34px,4vw,60px);margin:0 0 12px;letter-spacing:-.045em}.cta-box p{color:#dcecff;font-size:17px;line-height:1.65;max-width:820px}.cta-box .btn{position:relative;z-index:2}.cta-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.cta-links a{font-size:12px;padding:9px 12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;color:#e8f3ff}
+    footer{padding:50px 0 30px;border-top:1px solid var(--line);background:#fff}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr 1fr;gap:28px}.footer-grid h4{margin:0 0 12px}.footer-grid a,.footer-grid p{display:block;font-size:12px;color:#6c84a2;line-height:1.8}.legal{margin-top:35px;padding-top:20px;border-top:1px solid #e8f1fa;color:#8ba0b9;font-size:11px;line-height:1.7}
+    .reveal{opacity:0;transform:translateY(22px);transition:.7s ease}.reveal.in{opacity:1;transform:none}@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .mobile-menu{display:none}.hamb{display:none}
+    @media(max-width:1080px){.menu{display:none}.hamb{display:flex}.hero-grid,.split,.composer,.scenarios,.biz-grid{grid-template-columns:1fr}.hero{padding-top:120px}.hero-grid{gap:35px}.hardware-grid{grid-template-columns:repeat(3,1fr)}.layers{grid-template-columns:repeat(2,1fr)}.partners{grid-template-columns:repeat(2,1fr)}.roadmap{grid-template-columns:1fr 1fr}.roadmap:before{display:none}.clinical-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.chip.c1,.chip.c2{display:none}}
+    @media(max-width:680px){.wrap{width:min(100% - 24px,var(--max))}.section{padding:78px 0}.hero h1{font-size:55px}.hero .subtitle{font-size:27px}.hardware-grid{grid-template-columns:repeat(2,1fr)}.layers,.partners,.roadmap,.stats,.footer-grid{grid-template-columns:1fr}.canvas{justify-content:flex-start}.mode ul{grid-template-columns:1fr}.cta-box{grid-template-columns:1fr;padding:34px}.brand small{display:none}.nav-inner{height:66px}.btn.nav-cta{display:none}.scene-main{min-height:430px}.source-note{font-size:10px}}
+  </style>
+</head>
+<body>
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top"><span class="brand-mark"></span><span>NeuroBlocks<small>MODULAR NEUROTECH PLATFORM</small></span></a>
+    <div class="menu">
+      <a href="#platform">平台</a><a href="#hardware">硬件</a><a href="#skillos">SkillOS</a><a href="#scenarios">场景</a><a href="#clinical">临床科研</a><a href="#compare">对比</a><a href="#ecosystem">生态</a>
+    </div>
+    <a class="btn primary nav-cta" href="#contact">合作 / 获取方案</a>
+    <button class="btn hamb" id="hamb">菜单</button>
+  </div>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <canvas id="netCanvas" style="position:absolute;inset:0;width:100%;height:100%;opacity:.28;pointer-events:none"></canvas>
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow"><span class="dot"></span> 从 Idea 到可运行 BCI 产品</span>
+      <h1 class="gradient-text">NeuroBlocks</h1>
+      <div class="subtitle">模块化神经科技平台与 <span class="gradient-text">AI Skill</span> 生态系统</div>
+      <p>把脑机接口从“重复造设备”变成“组合能力”：硬件像积木、Skill 像应用、Agent 像助手。面向 BCI 创业者、高校科研、儿童教育、科创竞赛与临床科研。</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#composer">体验 Prompt → BCI</a>
+        <a class="btn" href="#platform">查看产品架构</a>
+      </div>
+      <div class="hero-proof">
+        <span class="proof"><b>Hardware</b> 可插拔 / 可重组</span>
+        <span class="proof"><b>SkillOS</b> 能力封装 / 复用</span>
+        <span class="proof"><b>Agent</b> 自然语言编排</span>
+      </div>
+      <div class="mini-wave"><svg viewBox="0 0 800 60" preserveAspectRatio="none"><path d="M0 34 C50 30 55 30 90 34 S130 38 150 34 L170 34 180 8 195 52 210 16 228 42 244 30 280 34 C310 40 325 26 350 34 S400 34 430 34 L448 34 462 11 476 49 491 18 508 40 525 29 C560 34 585 32 610 34 S655 36 680 34 L700 34 712 16 724 44 736 26 748 38 765 33 800 34" fill="none" stroke="#1888ef" stroke-width="2.4"/></svg></div>
+    </div>
+    <div class="video-shell reveal">
+      <video autoplay muted loop playsinline poster="assets/hero.webp"><source src="assets/hero-loop.mp4" type="video/mp4"></video>
+      <div class="chip c1">Hardware Blocks · 模块化硬件</div>
+      <div class="chip c2">SkillOS · 能力即插即用</div>
+      <div class="chip c3">NeuroAgent · 自然语言组装</div>
+    </div>
+  </div>
+</section>
+<div class="ticker"><div class="ticker-track"><span><i></i>EEG</span><span><i></i>EMG</span><span><i></i>EOG</span><span><i></i>PPG</span><span><i></i>EDA</span><span><i></i>IMU</span><span><i></i>fNIRS</span><span><i></i>GPIO</span><span><i></i>Robot</span><span><i></i>Edge AI</span><span><i></i>SkillOS</span><span><i></i>NeuroAgent</span><span><i></i>Education</span><span><i></i>Competition</span><span><i></i>Research</span><span><i></i>OEM</span><span><i></i>Clinical Research</span><span><i></i>EEG</span><span><i></i>EMG</span><span><i></i>EOG</span><span><i></i>PPG</span><span><i></i>EDA</span><span><i></i>IMU</span><span><i></i>fNIRS</span><span><i></i>GPIO</span><span><i></i>Robot</span></div></div>
+
+<section class="section" id="why">
+  <div class="wrap split">
+    <div class="image-card reveal"><img loading="lazy" src="assets/compare.webp" alt="NeuroBlocks 产品差异化对比概念图"></div>
+    <div class="reveal"><span class="eyebrow"><span class="dot"></span> Why NeuroBlocks</span><h2 class="h2">真正缺少的不是更多设备，<span class="gradient-text">而是一套可组装的基础设施</span></h2><p class="lead">今天的脑机接口研发常被驱动、协议、同步、硬件适配与界面开发反复切割。NeuroBlocks 把这些复杂性压到平台底层，让团队把时间重新花在科学问题、产品体验与真实需求上。</p><div class="stats"><div class="stat"><strong>Block</strong><small>硬件、算法、交互均可组件化</small></div><div class="stat"><strong>Skill</strong><small>标准化能力单元，可组合与复用</small></div><div class="stat"><strong>Agent</strong><small>从自然语言需求到系统工作流</small></div></div></div>
+  </div>
+</section>
+
+<section class="section compact" id="platform">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span> Platform Architecture</span>
+    <h2 class="h2">八层可重组架构：<span class="gradient-text">每一层都是“积木”</span></h2>
+    <p class="lead">一个新产品，不再意味着从零开发；它可以由 Hardware + NeuroBus + Compute + NeuroOS + Skill + Agent + Workflow + 应用模板重新组合。</p>
+    <div class="layers reveal" id="layers">
+      <div class="layer active" data-layer="0"><span class="layer-num">L1</span><h3>Hardware Blocks</h3><p>EEG / ExG / PPG / IMU / fNIRS / GPIO / Robot</p><span class="layer-icon">◈</span></div>
+      <div class="layer" data-layer="1"><span class="layer-num">L2</span><h3>NeuroBus + Hub</h3><p>供电、连接、同步、模块发现、自描述能力</p><span class="layer-icon">⌁</span></div>
+      <div class="layer" data-layer="2"><span class="layer-num">L3–L4</span><h3>NeuroCore + OS</h3><p>边缘计算、数据流、Runtime、QC、可视化</p><span class="layer-icon">▦</span></div>
+      <div class="layer" data-layer="3"><span class="layer-num">L5–L8</span><h3>Skill + Agent + Ecosystem</h3><p>能力市场、智能编排、应用套件、开发者生态</p><span class="layer-icon">✦</span></div>
+    </div>
+    <div class="layer-detail show" id="layerDetail"><div><h3 style="margin:0 0 10px">Hardware Universe</h3><p id="layerText">从“买一台设备”转向“购买能力组件”。节点可以按需求安装、替换、扩展，并通过统一接口被系统自动识别。</p></div><div class="tags" id="layerTags"><span class="tag">EEG</span><span class="tag">EMG</span><span class="tag">EOG</span><span class="tag">PPG</span><span class="tag">EDA</span><span class="tag">IMU</span><span class="tag">fNIRS</span><span class="tag">Robot</span></div></div>
+    <div class="image-card reveal" style="margin-top:28px"><img loading="lazy" src="assets/architecture.webp" alt="NeuroBlocks 2.0 八层架构"></div>
+  </div>
+</section>
+
+<section class="section" id="hardware">
+ <div class="wrap">
+  <span class="eyebrow"><span class="dot"></span> Hardware Blocks</span><h2 class="h2">把神经科技硬件，做成<span class="gradient-text">可插拔能力组件</span></h2><p class="lead">结构件和外壳优先采用 3D 打印实现快速迭代；电极、AFE、光源/探测器与核心 PCB 仍采用适合量产和安全要求的电子制造工艺。</p>
+  <div class="filters" id="hwFilters"><button class="filter active" data-cat="all">全部</button><button class="filter" data-cat="sense">NeuroSense</button><button class="filter" data-cat="motion">NeuroMotion</button><button class="filter" data-cat="optics">NeuroOptics</button><button class="filter" data-cat="interact">NeuroInteract</button><button class="filter" data-cat="compute">NeuroCompute</button><button class="filter" data-cat="power">NeuroPower</button></div>
+  <div class="hardware-grid reveal" id="hardwareGrid">
+    <div class="hw" data-cat="sense"><div class="ico">〽</div><h4>EEG / ExG</h4><p>EEG / EOG / EMG / ECG，统一生物电前端。</p></div>
+    <div class="hw" data-cat="sense"><div class="ico">♥</div><h4>PPG / SpO₂</h4><p>心率、HRV、血氧等生理上下文。</p></div>
+    <div class="hw" data-cat="sense"><div class="ico">◌</div><h4>EDA / Temp / Resp</h4><p>自主神经、皮温与呼吸信号。</p></div>
+    <div class="hw" data-cat="motion"><div class="ico">⌖</div><h4>IMU / Pose</h4><p>运动姿态、头部位置、步态与运动学。</p></div>
+    <div class="hw" data-cat="optics"><div class="ico">◉</div><h4>fNIRS Tx / Rx</h4><p>第二阶段光学模块，支持灵活光极布局。</p></div>
+    <div class="hw" data-cat="interact"><div class="ico">⚙</div><h4>GPIO / Robot</h4><p>机器人、机械臂、LED、Haptic 与外设交互。</p></div>
+    <div class="hw" data-cat="interact"><div class="ico">⌘</div><h4>ROS / Arduino Bridge</h4><p>连接 ROS2、Arduino、micro:bit 与 Maker 生态。</p></div>
+    <div class="hw" data-cat="compute"><div class="ico">▣</div><h4>NeuroCore Lite</h4><p>教育、科研、快速验证的低成本边缘算力。</p></div>
+    <div class="hw" data-cat="compute"><div class="ico">AI</div><h4>NeuroCore Pro</h4><p>多模态实时推理与高级科研 / OEM。</p></div>
+    <div class="hw" data-cat="power"><div class="ico">▤</div><h4>Battery Block</h4><p>可更换电源、低功耗运行与状态监测。</p></div>
+    <div class="hw" data-cat="power"><div class="ico">⌁</div><h4>Wireless Block</h4><p>BLE / Wi-Fi / 本地网络与同步接口。</p></div>
+    <div class="hw" data-cat="sense"><div class="ico">＋</div><h4>Trigger / Sync</h4><p>TTL / Event / 多设备时间同步。</p></div>
+  </div>
+  <div class="image-card reveal" style="margin-top:28px"><img loading="lazy" src="assets/hardware.webp" alt="NeuroBlocks 模块化硬件家族"></div>
+ </div>
+</section>
+
+<section class="section compact" id="skillos">
+ <div class="wrap">
+  <span class="eyebrow"><span class="dot"></span> SkillOS</span><h2 class="h2">未来开发单位，不是一段代码，<span class="gradient-text">而是一项能力</span></h2><p class="lead">每个 Skill 封装输入、硬件要求、信号处理、模型、输出、UI、算力与权限。用户可以安装、组合、复用和发布，而不必从驱动和脚本开始。</p>
+  <div class="split" style="margin-top:35px"><div class="image-card reveal"><img loading="lazy" src="assets/skills.webp" alt="NeuroBlocks SkillOS 能力商店"></div><div class="reveal"><h3 style="font-size:30px;margin-top:0">Skill Store</h3><p class="lead" style="font-size:17px">Hardware Skill → Signal Skill → QC Skill → AI Skill → Interaction Skill → Workflow Skill → Application Skill。</p><div class="biz-list"><div class="biz-item"><strong>Blink.skill</strong><small>EOG / EEG 眨眼检测与交互</small></div><div class="biz-item"><strong>SSVEP.skill</strong><small>视觉诱发电位识别</small></div><div class="biz-item"><strong>MotorIntent.skill</strong><small>运动意图解码</small></div><div class="biz-item"><strong>Fusion.skill</strong><small>EEG–EMG–IMU 多模态融合</small></div><div class="biz-item"><strong>QC.skill</strong><small>阻抗 / 噪声 / 伪迹 / 数据质量</small></div><div class="biz-item"><strong>RobotControl.skill</strong><small>机器人 / 机械臂 / 外设控制</small></div></div></div></div>
+ </div>
+</section>
+
+<section class="section" id="composer">
+ <div class="wrap">
+  <span class="eyebrow"><span class="dot"></span> NeuroStudio + NeuroAgent</span><h2 class="h2">从 <span class="gradient-text">Prompt → BCI</span>，再到 Prompt → Product</h2><p class="lead">普通用户用自然语言描述需求；系统推荐硬件、加载 Skill、生成 Workflow 和 UI。专业开发者仍可下沉到底层 API、Python、MNE、BrainFlow、LSL 与 ROS。</p>
+  <div class="composer reveal">
+    <div class="console"><h3>Ask NeuroAgent</h3><p style="color:#a7c7ee;font-size:13px">描述你想搭建的 BCI / NeuroTech 产品。</p><div class="prompt"><input id="promptInput" value="我要做一个通过眨眼控制机器人小车的课堂实验" aria-label="NeuroAgent prompt"><button id="promptGo">生成</button></div><div class="flow" id="agentFlow"><div class="flow-step on"><span class="step-no">1</span><span><b>理解需求</b><br><small>教育 · 眨眼 · 机器人</small></span></div><div class="flow-step"><span class="step-no">2</span><span><b>推荐硬件</b><br><small>EOG / EEG + NeuroCore Mini</small></span></div><div class="flow-step"><span class="step-no">3</span><span><b>加载 Skill</b><br><small>Blink.skill + RobotControl.skill</small></span></div><div class="flow-step"><span class="step-no">4</span><span><b>生成 Workflow</b><br><small>Signal → Skill → Command → Robot</small></span></div><div class="flow-step"><span class="step-no">5</span><span><b>运行 / 记录 / 报告</b><br><small>实时数据 · QC · 可视化</small></span></div></div></div>
+    <div class="builder"><div class="builder-toolbar"><strong>NeuroStudio Canvas</strong><button class="run" id="runDemo">▶ RUN</button></div><div class="canvas"><div class="node sensor"><b id="n1">EOG Node</b><small>Signal Input</small></div><span class="arrow">→</span><div class="node skill"><b id="n2">Blink.skill</b><small>Detection</small></div><span class="arrow">→</span><div class="node agent"><b id="n3">Command Mapper</b><small>Agent / Workflow</small></div><span class="arrow">→</span><div class="node output"><b id="n4">Robot</b><small>Action</small></div></div></div>
+  </div>
+  <div class="image-card reveal" style="margin-top:28px"><img loading="lazy" src="assets/studio.webp" alt="NeuroStudio 可视化工作台"></div>
+ </div>
+</section>
+
+<section class="section compact" id="scenarios">
+ <div class="wrap"><span class="eyebrow"><span class="dot"></span> Application Kits</span><h2 class="h2">一套底座，生成<span class="gradient-text">完全不同的产品</span></h2><p class="lead">教育、竞赛负责扩大用户和开发者，科研负责技术验证与品牌，Founder/OEM 帮助产业落地，临床科研为高价值医疗场景建立受控入口。</p>
+  <div class="scenarios reveal" style="margin-top:35px"><div class="scene-main"><img id="sceneImg" src="assets/edu.webp" alt="NeuroBlocks 应用场景"><div class="scene-copy"><h3 id="sceneTitle">NeuroBlocks EDU</h3><p id="sceneDesc">脑科学 + AI + 机器人 + 工程：让孩子第一次看到自己的信号让机器动起来。</p></div></div><div class="scene-tabs" id="sceneTabs"><button class="scene-tab active" data-img="edu.webp" data-title="NeuroBlocks EDU" data-desc="脑科学 + AI + 机器人 + 工程：让孩子第一次看到自己的信号让机器动起来。"><strong>儿童脑机接口教育</strong><small>10–30 分钟搭起可互动实验</small></button><button class="scene-tab" data-img="competition.webp" data-title="NeuroBlocks Arena" data-desc="统一硬件与 Skill 标准，让竞赛比创造力，而不是比谁更会装驱动。"><strong>科创竞赛 / Hackathon</strong><small>脑控赛车、机械臂、游戏、AI Challenge</small></button><button class="scene-tab" data-img="research.webp" data-title="Research Pro" data-desc="EEG / EMG / IMU / PPG 多模态融合，兼容 Raw Data、Python、MNE、BrainFlow 与 LSL。"><strong>高校科研</strong><small>Skill First + API Open</small></button><button class="scene-tab" data-img="startup.webp" data-title="Founder / OEM" data-desc="Idea → Prototype → Pilot → OEM Product，让创业团队先验证需求，再投入硬件量产。"><strong>创业孵化 / OEM</strong><small>白牌、SDK、Skill、NRE 与量产支持</small></button><button class="scene-tab" data-img="clinical.webp" data-title="Clinical Research" data-desc="开放用于创新，受控用于临床科研：固定工作流、权限、审计与数据安全。"><strong>临床科研</strong><small>NeuroRehab Research Kit</small></button></div></div>
+  <div class="scene-video reveal"><video autoplay muted loop playsinline poster="assets/edu.webp"><source src="assets/scenarios-loop.mp4" type="video/mp4"></video></div>
+ </div>
+</section>
+
+<section class="section" id="clinical">
+ <div class="wrap"><span class="eyebrow"><span class="dot"></span> Clinical Research Value</span><h2 class="h2">开放用于创新，<span class="gradient-text">受控用于临床科研</span></h2><p class="lead">医疗价值首先来自可重复、多模态、低门槛的研究工具，而不是未经验证的疗效承诺。临床路径采用独立 SKU 与受控工作流，逐步推进验证和注册。</p>
+  <div class="clinical-grid reveal"><div class="mode"><span class="eyebrow">Research / Developer</span><h3>开放创新模式</h3><ul><li>开放硬件组合</li><li>开放 Skill 与 API</li><li>Raw Data / Python</li><li>快速原型验证</li><li>第三方设备桥接</li><li>教育 / 科研 / OEM</li></ul></div><div class="mode clinical"><span class="eyebrow">Clinical Research</span><h3>受控临床科研模式</h3><ul><li>验证硬件与固件</li><li>签名 / 验证 Skill</li><li>锁定工作流程</li><li>角色与权限</li><li>数据安全 / 审计</li><li>可追溯研究输出</li></ul><div class="notice">产品在完成相应医疗器械注册或适用监管要求前，仅作为科研、教育、开发或临床科研工具使用，不作疾病诊断或治疗用途宣传。</div></div></div>
+  <div class="image-card reveal" style="margin-top:28px"><img loading="lazy" src="assets/clinical.webp" alt="NeuroBlocks 临床科研模式"></div>
+ </div>
+</section>
+
+<section class="section compact" id="compare">
+ <div class="wrap"><span class="eyebrow"><span class="dot"></span> Market Landscape · 2026</span><h2 class="h2">与现有商业系统比较：<span class="gradient-text">不是“谁替代谁”，而是产品范式不同</span></h2><p class="lead">以下只比较官方公开资料中明确描述的能力。NeuroBlocks 一栏为产品设计目标；其他系统均有各自成熟优势，不把“未公开”简单解释为“不具备”。</p>
+  <div class="compare-wrap reveal" style="margin-top:30px"><table><thead><tr><th>维度</th><th>NeuroBlocks <span class="pill plan">设计目标</span></th><th>OpenBCI</th><th>Wearable Sensing DSI-24</th><th>EMOTIV EPOC X</th><th>Artinis Brite</th></tr></thead><tbody>
+   <tr><td>核心定位</td><td><strong>模块化 NeuroTech 底座</strong><br>创业 / 科研 / EDU / 竞赛 / OEM / 临床科研</td><td>开放式 Biosensing / EEG 研发平台</td><td>研究级无线干 EEG + 辅助生理信号</td><td>14 通道无线研究级 EEG</td><td>可穿戴、多通道 fNIRS 研究系统</td></tr>
+   <tr><td>主要模态</td><td><span class="pill plan">规划</span> EEG / ExG / PPG / EDA / IMU / fNIRS / Context / Interaction</td><td>EEG / EMG / ECG + Pulse</td><td>21 EEG + 3 辅助输入；ExG / GSR / RESP / TEMP</td><td>14-ch EEG</td><td>fNIRS（脑氧合）+ 集成 IMU；可与 EEG / tES 组合</td></tr>
+   <tr><td>结构 / 传感布局</td><td><strong>节点级可插拔、可换位、可重组</strong></td><td>Ultracortex 开源、3D 可打印；常用 8/16 EEG 电极</td><td>21 EEG + 3 Aux；DSI-Flex 提供可变传感位置产品线</td><td>固定 14 通道头戴式布局</td><td>光极距离与模板可灵活配置；Brite MKIV 可到 27 channels</td></tr>
+   <tr><td>开发接口</td><td><strong>Skill First + API Open</strong><br>NeuroBus / Skill Spec / Agent</td><td>开放文档、硬件生态、开发工具</td><td>TCP/IP / C API / LSL，兼容 BCI2000 / OpenViBE 等</td><td>官方软件 / SDK 生态</td><td>OxySoft / Brite Connect；支持多模态研究整合</td></tr>
+   <tr><td>AI / 工作流层</td><td><strong>SkillOS + NeuroAgent</strong><br>No-Code / Low-Code / Pro-Code</td><td>可通过外部软件和开发生态构建</td><td>官方采集/分析与第三方科研软件生态</td><td>EMOTIV 软件与开发生态</td><td>官方采集/分析软件与多模态组合</td></tr>
+   <tr><td>边缘端产品化</td><td><span class="pill plan">规划</span> NeuroCore Lite / Pro，本地推理，无需服务器</td><td class="source-note">官方核心资料强调采集板与主机/软件生态</td><td class="source-note">官方重点为无线采集、实时流与科研集成</td><td class="source-note">官方重点为无线 EEG 与软件平台</td><td class="source-note">官方重点为可穿戴 fNIRS 与 OxySoft/Brite Connect</td></tr>
+   <tr><td>独特优势</td><td><strong>把“硬件 + 算法 + Agent + 应用模板”统一成可交易积木</strong></td><td>开放、成熟、3D 打印与 biosensing 社区</td><td>干电极、快速佩戴、辅助传感与科研兼容</td><td>消费化形态、无线、较成熟软件体验</td><td>便携 fNIRS、灵活光极、多模态研究能力</td></tr>
+  </tbody></table></div>
+  <p class="comparison-note">公开资料核对：OpenBCI All-in-One bundle 为 16 通道 Cyton+Daisy + Ultracortex，并支持 EEG/EMG/ECG 与 Pulse Sensor；Ultracortex 为开源、3D 可打印头架。Wearable Sensing DSI-24 为 21 EEG + 3 auxiliary inputs，并公开 ExG/GSR/RESP/TEMP 与 LSL/API 支持。EMOTIV EPOC X 官方定位为 14 通道无线研究级 EEG。Artinis Brite 为可穿戴多通道 fNIRS，Brite MKIV 官方描述可配置至 27 channels 并兼容 EEG/tES。<br><span class="source-note">Sources: <a href="https://shop.openbci.com/products/all-in-one-biosensing-r-d-bundle" target="_blank">OpenBCI bundle</a> · <a href="https://docs.openbci.com/AddOns/Headwear/MarkIV/" target="_blank">Ultracortex Mark IV</a> · <a href="https://wearablesensing.com/products/" target="_blank">Wearable Sensing</a> · <a href="https://www.emotiv.com/epoc-x" target="_blank">EMOTIV EPOC X</a> · <a href="https://artinis.com/brite" target="_blank">Artinis Brite</a></span></p>
+  <div class="image-card reveal" style="margin-top:24px"><img loading="lazy" src="assets/compare.webp" alt="NeuroBlocks 多维产品对比"></div>
+ </div>
+</section>
+
+<section class="section" id="ecosystem">
+ <div class="wrap"><span class="eyebrow"><span class="dot"></span> Business & Ecosystem</span><h2 class="h2">硬件是入口，<span class="gradient-text">Skill 与生态才是长期生意</span></h2><p class="lead">同一供应链可以派生多条产品线；同一用户可以不断扩容模块、算力和 Skill；同一开发者可以把算法做成可分发能力。</p>
+  <div class="biz-grid reveal" style="margin-top:35px"><div class="revenue-wheel" aria-label="NeuroBlocks 多元商业模式"></div><div><div class="biz-list"><div class="biz-item"><strong>Hardware Kit</strong><small>EDU / Maker / Founder / Research Pro</small></div><div class="biz-item"><strong>NeuroNode</strong><small>模块扩容与算力升级</small></div><div class="biz-item"><strong>Consumables</strong><small>电极、接触件、固定件与耗材</small></div><div class="biz-item"><strong>Software</strong><small>NeuroStudio / Lab / Enterprise</small></div><div class="biz-item"><strong>Skill Store</strong><small>数字能力商品与平台抽佣</small></div><div class="biz-item"><strong>Education / Arena</strong><small>课程、套件、赛事与认证</small></div><div class="biz-item"><strong>OEM / SDK</strong><small>白牌、NRE、授权与量产支持</small></div><div class="biz-item"><strong>Clinical Research</strong><small>受控科研套件与合作方案</small></div></div></div></div>
+  <div class="image-card reveal" style="margin-top:28px"><img loading="lazy" src="assets/business.webp" alt="NeuroBlocks 商业生态飞轮"></div>
+ </div>
+</section>
+
+<section class="section compact" id="research">
+ <div class="wrap"><span class="eyebrow"><span class="dot"></span> Research Collaboration</span><h2 class="h2">从“采购设备”升级为<span class="gradient-text">共同定义下一代能力模块</span></h2><p class="lead">高校、医院、创业团队和赛事组织者都可以进入同一个生态，但参与方式不同。</p>
+  <div class="partners reveal"><div class="partner"><div class="big">◫</div><b>高校实验室</b><p>Design Partner、算法 Skill 共创、公开数据 Benchmark、多模态科研工作流。</p></div><div class="partner"><div class="big">✚</div><b>医院 / 康复团队</b><p>临床科研方案、标准化协议、可追溯数据与受控研究流程。</p></div><div class="partner"><div class="big">↗</div><b>BCI 创业者</b><p>Founder Kit、白牌硬件、SDK、Skill、定制外观、NRE 与 OEM。</p></div><div class="partner"><div class="big">♜</div><b>学校 / 赛事</b><p>EDU、Arena、脑控机器人、AI Challenge 与开发者技能市场。</p></div></div>
+  <div class="roadmap reveal"><div class="rm"><small>0–3 MONTHS</small><h4>Platform MVP</h4><p>NeuroBus 1.0、NeuroHub、核心 Node、NeuroCore Lite、10 个基础 Skill。</p></div><div class="rm"><small>3–6 MONTHS</small><h4>First Products</h4><p>EDU Mini、Maker、Founder Kit；高校与教育 Design Partners。</p></div><div class="rm"><small>6–12 MONTHS</small><h4>Ecosystem</h4><p>Skill Store Beta、NeuroBlocks Challenge、Research Pro、OEM Program。</p></div><div class="rm"><small>12M+</small><h4>Multimodal & Clinical Research</h4><p>fNIRS / Optics、更多第三方节点、受控临床科研 SKU 与规范化验证。</p></div></div>
+ </div>
+</section>
+
+<section class="section compact" id="innovation">
+ <div class="wrap split"><div class="reveal"><span class="eyebrow"><span class="dot"></span> Moat & Standards</span><h2 class="h2">真正的护城河：<span class="gradient-text">标准、运行时、生态</span></h2><p class="lead">电极和单一参数容易被追赶；更难复制的是统一总线、自描述节点、Skill 标准、Runtime、Agent Composer 与开发者网络。</p><div class="biz-list" style="margin-top:25px"><div class="biz-item"><strong>NeuroBus</strong><small>机械 / 电气 / 数据 / 能力标准</small></div><div class="biz-item"><strong>Self-Describing Node</strong><small>模块身份、位置、采样、能力与兼容 Skill</small></div><div class="biz-item"><strong>NeuroSkill Specification</strong><small>能力包与依赖标准</small></div><div class="biz-item"><strong>SkillOS Runtime</strong><small>运行、调度、权限、版本与安全</small></div><div class="biz-item"><strong>NeuroAgent Composer</strong><small>自然语言 → 设备 / Skill / Workflow</small></div><div class="biz-item"><strong>Marketplace</strong><small>硬件、Skill、Design、应用与开发者生态</small></div></div></div><div class="image-card reveal"><img loading="lazy" src="assets/moat.webp" alt="NeuroBlocks 标准与生态护城河"></div></div>
+ </section>
+
+<section class="cta" id="contact"><div class="wrap"><div class="cta-box reveal"><div><h2>From Idea to BCI Product.</h2><p>希望一起做 Design Partner、科研合作、教育/竞赛套件、Founder Kit、OEM 或临床科研样机？NeuroBlocks 的目标不是让所有人重新学习一套硬件，而是让更多人能够直接创造。</p><div class="cta-links"><a href="#platform">查看架构</a><a href="#composer">体验 Composer</a><a href="#compare">查看市场对比</a><a href="#research">合作模式</a></div></div><a class="btn" href="#top">回到顶部 ↑</a></div></div></section>
+</main>
+
+<footer><div class="wrap"><div class="footer-grid"><div><div class="brand"><span class="brand-mark"></span><span>NeuroBlocks<small>BUILD BRAINS FOR A BETTER TOMORROW</small></span></div><p>模块化神经科技平台与 AI Skill 生态系统。Hardware Blocks × AI Skills × Agents。</p></div><div><h4>产品</h4><a href="#hardware">Hardware Blocks</a><a href="#skillos">SkillOS</a><a href="#composer">NeuroStudio / Agent</a><a href="#scenarios">Application Kits</a></div><div><h4>生态</h4><a href="#research">科研合作</a><a href="#ecosystem">商业合作 / OEM</a><a href="#compare">市场对比</a><a href="#clinical">临床科研</a></div><div><h4>证据来源</h4><a target="_blank" href="https://shop.openbci.com/products/all-in-one-biosensing-r-d-bundle">OpenBCI</a><a target="_blank" href="https://wearablesensing.com/products/">Wearable Sensing</a><a target="_blank" href="https://www.emotiv.com/epoc-x">EMOTIV</a><a target="_blank" href="https://artinis.com/brite">Artinis</a></div></div><div class="legal">NeuroBlocks 当前页面为产品设计与创业展示原型。涉及 NeuroBlocks 的硬件、Skill、Agent、价格/商业模式与临床科研功能均为规划性产品设计，不代表已取得医疗器械注册或临床疗效验证。第三方产品信息依据其公开官方资料整理，最终规格以厂商最新资料为准。</div></div></footer>
+
+<script>
+const $=(s,e=document)=>e.querySelector(s), $$=(s,e=document)=>[...e.querySelectorAll(s)];
+window.addEventListener('scroll',()=>$('#nav').classList.toggle('scrolled',scrollY>12));
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});$$('.reveal').forEach(el=>obs.observe(el));
+// Layer explorer
+const layerData=[
+ {t:'从“买一台设备”转向“购买能力组件”。节点可以按需求安装、替换、扩展，并通过统一接口被系统自动识别。',tags:['EEG','EMG','EOG','PPG','EDA','IMU','fNIRS','Robot']},
+ {t:'NeuroBus 统一机械、电气、数据与能力描述；NeuroHub 负责供电、时间同步、设备发现、数据聚合与 Trigger。',tags:['Mechanical','Electrical','Data','Capability','Sync','Discovery']},
+ {t:'NeuroCore 把采集、QC 与 AI 推理带到边缘端；NeuroOS / Studio 提供 Runtime、可视化、数据管理和开发工作台。',tags:['MCU','CPU/NPU/GPU','QC','Runtime','Builder','Raw Data']},
+ {t:'Skill 把算法封装成能力；Agent 负责理解需求和编排；Marketplace 让能力、硬件和应用进入可持续生态。',tags:['Skill Store','NeuroAgent','Workflow','Education','Competition','OEM','Clinical Research']}
+];
+$$('.layer').forEach(el=>el.onclick=()=>{ $$('.layer').forEach(x=>x.classList.remove('active'));el.classList.add('active');const d=layerData[+el.dataset.layer];$('#layerText').textContent=d.t;$('#layerTags').innerHTML=d.tags.map(x=>`<span class="tag">${x}</span>`).join('');$('#layerDetail').classList.add('show')});
+// Hardware filter
+$$('.filter').forEach(b=>b.onclick=()=>{ $$('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');const c=b.dataset.cat;$$('.hw').forEach(x=>x.style.display=(c==='all'||x.dataset.cat===c)?'block':'none')});
+// Agent prompt demo
+const cases=[
+ {keys:['康复','运动','肌电'],nodes:['EEG + EMG','MotorIntent.skill','Fusion Agent','Rehab Feedback'],steps:['理解需求：康复 / 运动意图','推荐 EEG + EMG + IMU','加载 MotorIntent + Fusion','生成运动意图工作流','实时 QC / 可视化 / 报告']},
+ {keys:['疲劳','驾驶'],nodes:['EEG + EOG + PPG','Fatigue.skill','Multimodal Agent','Fatigue UI'],steps:['理解需求：驾驶疲劳','推荐 EEG + EOG + PPG','加载 Blink + HRV + Fatigue','生成多模态融合流程','边缘推理 / 风险提示']},
+ {keys:['眨眼','机器人','课堂'],nodes:['EOG Node','Blink.skill','Command Mapper','Robot'],steps:['理解需求：教育 · 眨眼 · 机器人','推荐 EOG / EEG + NeuroCore Mini','加载 Blink.skill + RobotControl.skill','生成 Signal → Skill → Command','实时数据 · QC · 可视化']}
+];
+function runAgent(){let v=$('#promptInput').value;let c=cases.find(c=>c.keys.some(k=>v.includes(k)))||cases[2];['n1','n2','n3','n4'].forEach((id,i)=>$('#'+id).textContent=c.nodes[i]);$$('.flow-step').forEach((s,i)=>{s.classList.remove('on');setTimeout(()=>{s.classList.add('on');s.querySelector('small').textContent=c.steps[i]},220*i)});}
+$('#promptGo').onclick=runAgent;$('#promptInput').addEventListener('keydown',e=>{if(e.key==='Enter')runAgent()});$('#runDemo').onclick=()=>{const b=$('#runDemo');b.textContent='● RUNNING';b.style.background='#12a77c';setTimeout(()=>{b.textContent='✓ READY';},1400);setTimeout(()=>{b.textContent='▶ RUN';b.style.background='#1479ff'},3000)};
+// Scenes
+$$('.scene-tab').forEach(b=>b.onclick=()=>{$$('.scene-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');const im=$('#sceneImg');im.style.opacity=.15;setTimeout(()=>{im.src='assets/'+b.dataset.img;$('#sceneTitle').textContent=b.dataset.title;$('#sceneDesc').textContent=b.dataset.desc;im.style.opacity=1},180)});
+// Canvas background
+const cv=$('#netCanvas'),ctx=cv.getContext('2d');let pts=[];function resize(){cv.width=innerWidth*devicePixelRatio;cv.height=Math.max(innerHeight,900)*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);pts=Array.from({length:Math.min(70,Math.floor(innerWidth/18))},()=>({x:Math.random()*innerWidth,y:Math.random()*Math.max(innerHeight,900),vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18}))}resize();addEventListener('resize',resize);function draw(){ctx.clearRect(0,0,innerWidth,Math.max(innerHeight,900));for(let i=0;i<pts.length;i++){let a=pts[i];a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>innerWidth)a.vx*=-1;if(a.y<0||a.y>innerHeight)a.vy*=-1;ctx.beginPath();ctx.arc(a.x,a.y,1.7,0,Math.PI*2);ctx.fillStyle='#2996ff';ctx.fill();for(let j=i+1;j<pts.length;j++){let b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<125){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle=`rgba(63,162,238,${.11*(1-d/125)})`;ctx.stroke()}}}requestAnimationFrame(draw)}draw();
+</script>
+</body></html>
